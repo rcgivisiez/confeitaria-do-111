@@ -51,6 +51,10 @@ p {
     color: white;
 }
 
+.bg-pages {
+    background-image: url('../img/background.png');
+}
+
 .text-faded {
     color: rgba(white, .7);
 }
@@ -153,9 +157,10 @@ header {
     position: relative;
     width: 100%;
     min-height: auto;
-    @include background-cover;
+    background-size: contain;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/logo-longa-transparencia.png'), url('../img/background.png');
+    background-repeat: repeat-x;
     text-align: center;
     color: white;
     .header-content {
@@ -175,7 +180,7 @@ header {
             }
             p {
                 font-weight: 300;
-                color: rgba(white, .7);
+                color: rgba(black, .7);
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -192,10 +197,10 @@ header {
             padding: 0 50px;
             .header-content-inner {
                 max-width: 1000px;
-                margin-left: auto;
+                margin-left: 250px;
                 margin-right: auto;
                 p {
-                    font-size: 18px;
+                    font-size: 24px;
                     max-width: 80%;
                     margin-left: auto;
                     margin-right: auto;
@@ -204,7 +209,6 @@ header {
         }
     }
 }
-
 // Sections
 
 .section-heading {
@@ -255,7 +259,7 @@ header {
                 font-size: 14px;
             }
             .project-name {
-                font-size: 18px;
+                font-size: 12px;
             }
         }
     }
@@ -271,7 +275,7 @@ header {
                     font-size: 16px;
                 }
                 .project-name {
-                    font-size: 22px;
+                    font-size: 16px;
                 }
             }
         }
@@ -349,3 +353,57 @@ body {
     -webkit-tap-highlight-color: $theme-dark;
 }
 
+form {
+    label {
+        color: white;
+        @include sans-serif-font;
+        font-size: 20px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    textarea {
+        color: black;
+        @include sans-serif-font;
+        font-size: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+
+    input {
+        color: black;
+        @include sans-serif-font;
+        font-size: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+    
+    select {
+        color: black;
+        @include sans-serif-font;
+        font-size: 20px;
+        margin-top: 20px;
+        border-radius: 10px;
+    }
+}
+
+.produtos-texto {
+    text-align: center;
+    ul {
+        list-style-type:none
+    }
+}
+
+.selects-encomendas {
+    text-align: left;
+    margin-left: 36px;
+}
+
+.encomendas {
+    label {
+        color: black;
+    }
+}
